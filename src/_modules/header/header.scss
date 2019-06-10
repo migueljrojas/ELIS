@@ -1,4 +1,48 @@
 .header {
+    background: $lila;
+    padding: 40px  0;
+    border-bottom: 1px solid $white;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__logo {
+        height: 8vh;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+
+    &__nav {
+        opacity: 0;
+        overflow: hidden;
+        width: 0;
+        transform: translateX(-100%);
+
+        @include mq(md) {
+            opacity: 1;
+            overflow: visible;
+            width: auto;transform: translateX(0);
+        }
+    }
+
+    &__list {
+        display: flex;
+
+    }
+
+    &__item {
+        a {
+            color: $white;
+        }
+    }
 
     $h: &;
 
@@ -6,13 +50,17 @@
         cursor: pointer;
         width: 25px;
         height: 25px;
-        margin: auto;
-        position: absolute;
-        right: 32px;
-        top: 30px;
+        // margin: auto;
+        // position: absolute;
+        // right: 32px;
+        // top: 30px;
+
+        @include mq(md) {
+            display: none;
+        }
 
         span {
-            background-color: $mainColor;
+            background-color: $white;
             border-radius: 2px;
             content: '';
             display: block;
