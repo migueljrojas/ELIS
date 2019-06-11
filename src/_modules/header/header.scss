@@ -1,17 +1,20 @@
 .header {
     background: $lila;
-    padding: 40px  0;
-    border-bottom: 1px solid $white;
-
+    position: relative;
+    
     &__container {
+        padding: 20px 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        border-bottom: 1px solid $white;
     }
 
     &__logo {
-        height: 8vh;
+        height: 60px;
+        
+        @include mq(md) {
+        }
 
         img {
             height: 100%;
@@ -21,26 +24,67 @@
 
 
     &__nav {
+        @include trans;
+        
         opacity: 0;
         overflow: hidden;
         width: 0;
         transform: translateX(-100%);
+        background: $lila;
+        position: absolute;
+        top: 101px;
+        left: 0;
+        height: calc(100vh - 101px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
 
         @include mq(md) {
+            position: relative;
+            left: auto;
+            top: auto;
+            width: auto;
             opacity: 1;
             overflow: visible;
             width: auto;transform: translateX(0);
+            height: 60px;
+            align-items: flex-end;
+            justify-content: flex-end;
         }
     }
 
     &__list {
-        display: flex;
+        display: inline-block;
 
+        @include mq(md) {
+            display: flex;
+            padding-bottom: 12px;
+        }
     }
 
     &__item {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        @include mq(md) {
+            margin-left: 40px;
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+        }
+
         a {
             color: $white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 20px;
+
+            @include mq(md) {
+                font-size: 16px;
+            }
         }
     }
 
@@ -49,7 +93,7 @@
     &__hamburguer {
         cursor: pointer;
         width: 25px;
-        height: 25px;
+        height: 21px;
         // margin: auto;
         // position: absolute;
         // right: 32px;
@@ -97,7 +141,9 @@
         }
 
         #{$h}__nav {
-
+            opacity: 1;
+            transform: translateX(0);
+            width: 100%;
         }
     }
 }

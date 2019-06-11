@@ -1,3 +1,14 @@
 .footer {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    width: 25%;
+  }
+
+  &__rancagua-logo {
     
+  }
 }

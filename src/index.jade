@@ -2,4 +2,73 @@ extends _layouts/base
 
 block content
     main.home
-        .home__hero
+        section.home__hero
+            .container
+                .row
+                    .col-24.col-md-20.offset-md-2
+                        .home__hero__container
+                            h2.home__hero__title Encuentro Latinoamericano de Innovación Social 2019
+                            .home__hero__satellite
+                                img(src="/images/home/hero-satellite.png")
+                            .home__hero__bird
+                                img(src="/images/home/hero-bird.png")
+                            .home__hero__landscape
+                                img(src="/images/home/hero-landscape.png")
+                    .col-24.col-md-8.offset-md-14
+                        a.home__hero__button(href="#")
+                            i.material-icons assignment_turned_in
+                            p.home__hero__text Convocatoria Chile 2019
+                            span.-vertical
+                            span.-arrow
+        section.home__about
+            .container
+                .row
+                    .col-24.col-md-10.offset-md-2
+                        .home__about__container
+                            h3.home__about__subtitle elis 2019
+                            h2.home__about__title Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ames.
+                            p.home__about__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            a.home__about__button(href="#")
+                                span
+                                p Ver Cronograma 
+            .home__about__image
+                .home__about__wrapper
+                    img(src="/images/home/about.jpg")
+        section.home__news
+            .home__news__ripped-background
+                img(src="/images/red/ripped-top.png")
+            .container
+                .row
+                    .col-24.col-md-20.offset-md-2
+                        .row
+                            .col-24.col-md-8.offset-md-16
+                                h2.home__news__title Últimas noticias
+                        .row
+                            .col-24.col-md-8
+                                a.home__news__new-container(href="#")
+                                    .home__news__new-image  
+                                        img(src="/images/home/news-1.jpg")
+                                    .home__news__new-content
+                                        h4.home__news__new-subtitle elis 2019
+                                        h3.home__news__new-title Se abre convocatoria para postular a ELIS 2019
+                                        p.home__news__new-text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            .col-24.col-md-8
+                                a.home__news__new-container(href="#")
+                                    .home__news__new-image  
+                                        img(src="/images/home/news-1.jpg")
+                                    .home__news__new-content
+                                        h4.home__news__new-subtitle elis 2019
+                                        h3.home__news__new-title Se abre convocatoria para postular a ELIS 2019
+                                        p.home__news__new-text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            .col-24.col-md-8
+                                a.home__news__new-container(href="#")
+                                    .home__news__new-image  
+                                        img(src="/images/home/news-1.jpg")
+                                    .home__news__new-content
+                                        h4.home__news__new-subtitle elis 2018
+                                        h3.home__news__new-title Se realiza con éxito ELIS 2018
+                                        p.home__news__new-text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            .col-24.col-md-8.offset-md-8
+                                a.home__news__button(href="#")
+                                    p Ver más noticias
+                                    span

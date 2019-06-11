@@ -1,3 +1,265 @@
 .home {
+  overflow: hidden;
+  
+  &__hero {
+    background: linear-gradient(to bottom, $lila, $lilaDark);
+    position: relative;
     
+    &__container {
+      padding-top: 40px;
+    }
+  
+    &__title {
+      color: $white;
+      font-weight: 700;
+      font-size: 55px;
+      width: 45%;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    &__satellite {
+      position: absolute;
+      top: 40px;
+      right: 300px;
+    }
+
+    &__bird {
+      position: absolute;
+      top: 150px;
+      right: 100px;
+    }
+
+    &__landscape {
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__button {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      background: $lilaVibrant;
+      color: $white;
+      text-decoration: none;
+      padding: 20px 0;
+
+      .-vertical {
+        height: 100%;
+        width: 1px;
+        background: $white;
+      }
+
+      .-arrow {
+        width: 10px;
+        height: 10px;
+        border-right: 1px solid $white;
+        border-bottom: 1px solid $white;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &__text {
+      font-weight: 700;
+    }
+  }
+
+  &__about {
+    position: relative;
+
+    &__container {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &__subtitle {
+      text-transform: uppercase;
+      color: $lightGray;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      color: $lilaDark;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 36px;
+      margin: 0;
+      margin-bottom: 40px;
+    }
+
+    &__text {
+      margin: 0;
+      color: $lightGray;
+      font-size: 20px;
+    }
+
+    &__button {
+      margin-top: 40px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+
+      span {
+        width: 10px;
+        height: 10px;
+        border-right: 1px solid $lightGray;
+        border-bottom: 1px solid $lightGray;
+        transform: rotate(-45deg);
+        margin-right: 20px;
+      }
+
+      p {
+        color: $lilaVibrant;
+        font-weight: 700;
+        font-size: 18px;
+      }
+    }
+
+    &__image {
+      position: absolute;
+      top: 0;
+      
+      @include customMq(1200px) {
+        left: calc(50% + 110px);
+        width: calc(50% - 110px);
+      }
+
+      @include customMq(1350px) {
+        left: calc(50% + 120px);
+        width: calc(50% - 120px);
+      }
+    }
+
+    &__wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 162.6%;
+      height: 0;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__news {
+    z-index: 2;
+    position: relative;
+
+    @include mq(md) {
+      margin-top: -80px;
+    }
+
+    &__ripped-background {
+      position: absolute;
+      top: 140px;
+      bottom: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__title {
+      font-size: 32px;
+      text-align: center;      
+      color: $lilaDark;
+
+      @include mq(md) {
+        margin-bottom: 60px;
+        text-align: right;
+        color: $white;
+      }
+    }
+
+    &__new-container {
+      display: block;
+      text-decoration: none;
+      margin-bottom: 20px;
+      
+      @include mq(md) {
+        margin-bottom: 60px;
+      }
+    }
+
+    &__new-image {
+      height: 0;
+      padding-bottom: 100%;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        
+      }
+    }
+
+    &__new-content {
+      background: $white;
+      padding: 25px;
+    }
+
+    &__new-subtitle {
+      margin: 0;
+      color: $lilaVibrant;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 14px;
+    }
+
+    &__new-title {
+      margin: 0;
+      color: $lilaDark;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    &__new-text {
+      margin: 0;
+      color: $darkGray;
+    }
+
+    &__button {
+      text-decoration: none;
+      background: $lilaVibrant;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+
+      span {
+        width: 10px;
+        height: 10px;
+        border-right: 1px solid $lightGray;
+        border-bottom: 1px solid $lightGray;
+        transform: rotate(-45deg);
+      }
+      
+      p {
+        margin-right: 20px;
+        color: $white;
+        font-weight: 700;
+      }
+    }
+  }
 }
