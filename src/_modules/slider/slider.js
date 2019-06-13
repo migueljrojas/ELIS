@@ -6,10 +6,15 @@ var Slider = function() {
     if (slider) {
         slider.each(function(){
             $(this).slick({
-                dots: true,
-                fade: true,
-                arrows:  false,
-                autoplay: true
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                variableWidth: true,
+                arrows: true,
+                centerMode: true,
+                autoplay: false
             });
         });
     }

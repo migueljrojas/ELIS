@@ -1,14 +1,118 @@
 .footer {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background: $lightGray;
+    width: 100%;
+    bottom: 120px;
+
+    @include mq(md) {
+      bottom: 80px;
+    }
+  }
   &__container {
+    padding: 80px 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+    @include mq(md) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
   }
 
   &__wrapper {
-    width: 25%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    &:not(:last-child) {
+      margin-bottom: 40px;
+
+      @include mq(md) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include mq(md) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 20%;
+    }
   }
 
-  &__rancagua-logo {
+  &__rancagua-logo,
+  &__logo-purple {
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__text {
+    color: $darkGray;
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+
+    @include mq(md) {
+      text-align: left;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
     
+    @include mq(md) {
+      align-items: center;
+      height: 80px;
+      justify-content: space-between;
+      flex-direction: row;
+      
+    }
+  }
+  
+  &__copyright {
+    order: 2;
+    color: $darkGray;
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+    
+    @include mq(md) {
+      order: 1;
+      text-align: left;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+
+    @include mq(md) {
+      order: 2;
+    }
+  }
+
+  &__item {
+    margin: 20px;    
+
+    @include mq(md) {
+      margin-left: 20px;
+    }
+
+    i {
+      font-size: 30px;
+    }
   }
 }
+

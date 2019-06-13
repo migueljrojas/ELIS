@@ -1,0 +1,65 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+  main.red
+    section.red__hero
+      .container
+        .row
+          .col-24.col-md-20.offset-md-2
+            .red__hero__container
+              h2.red__hero__title ¿Qué es RELIS?
+    section.red__mision
+      .container
+        .row
+          .col-24.col-md-8.offset-md-2
+            .red__mision__container
+              h4.red__mision__subtitle.-subtitle LA RED
+              h3.red__mision__title.-title Misión
+              p.red__mision__text.-text Promover la innovación socual desde y con el sector público en América Latina, así como fomentar la cooperación entre los miembros de la red, mediante la articulación de actores, mecanismos, conocimiento y mejores prácticas, que reconozcan a la innovación social como una herramienta para construir cambios positivos en la región.
+      .red__mision__image
+        .red__mision__wrapper
+          img(src="/images/red/mision.jpg")
+    section.red__vision
+      .red__vision__ripped-background
+        img(src="/images/red/ripped-top.png")      
+      .container
+        .row
+          .col-24.col-md-20.offset-md-2
+            .red__vision__container
+              h3.red__vision__title.-title.-title--white Visión
+              p.red__vision__text.-text.-text--white Ser una plataforma de diálogo y de construcción participativa, a través de la cual miembros del sector público puedan explorar, compartir y co-crear con otros actores mejores prácticas para la solución de problemáticas sociales, desde las diversas manifestaciones de la innovación social.
+    section.red__objetivos
+      .container
+        .row
+          .col-24.col-md-8.offset-md-14
+            .red__objetivos__container
+              h3.red__objetivos__title.-title Objetivos
+              .red__objetivos__tabs
+                p.red__objetivos__tab(data-target="general") GENERAL
+                p.red__objetivos__tab(data-target="especificos") ESPECIFICOS
+              p.red__objetivos__text.-text(data-content="general") Promover la innovación socual desde y con el sector público en América Latina, así como fomentar la cooperación entre los miembros de la red, mediante la articulación de actores, mecanismos, conocimiento y mejores prácticas, que reconozcan a la innovación social como una herramienta para construir cambios positivos en la región.
+              p.red__objetivos__text.-text(data-content="especificos") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      .red__objetivos__image
+        img(src="/images/red/objetivos.png")
+    section.red__valor
+      .container
+        .row
+          .col-24.col-md-20.offset-md-2
+            .red__valor__container
+              h3.red__valor__title.-title Propuesta de valor
+              p.red__valor__text.-text.-text--purple Somos la primera red a nivel América Larina que ofrece una oportunidad de vinculación y soporte horizontal a intra-emprendedores en los gobiernos para desarrollar mejores prácticas de innovación social desde u con el sector público, en conjunto con actires multisectoriales. La innovación es un concepto novedoso para el sector público, pero que podrá ayudar a los gobiernos a acrecentar el impacto de sus planes, programas y políticas.
+
+    section.red__historia
+      img(src="/images/red/ripped-bottom.png")
+      .container
+        .row
+          .col-24.col-md-20.offset-md-2
+            h3.red__historia__title.-title.-title--white Historia
+          .col-24.col-md-8.offset-md-2
+            p.red__historia__text.-text.-text--white Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          .col-24.col-md-8.offset-md-4
+            p.red__historia__text.-text.-text--white Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.

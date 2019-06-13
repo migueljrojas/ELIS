@@ -30,7 +30,7 @@
         overflow: hidden;
         width: 0;
         transform: translateX(-100%);
-        background: $lila;
+        background: linear-gradient(to bottom, $lila, $lilaDark);
         position: absolute;
         top: 101px;
         left: 0;
@@ -51,6 +51,7 @@
             height: 60px;
             align-items: flex-end;
             justify-content: flex-end;
+            background: $lila;
         }
     }
 
